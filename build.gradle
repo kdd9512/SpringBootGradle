@@ -29,6 +29,15 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // jsp 파일 적용 위한 dependencies
+    // Spring Boot 는 .jsp 를 기본지원하지 않아서 이하와 같은 dependencies 설정이 필요하다
+    //javax.servlet/jstl
+    implementation group: 'javax.servlet', name: 'jstl', version: '1.2'
+    // tomcat-embed-core
+    implementation group: 'org.apache.tomcat.embed', name: 'tomcat-embed-core', version: '9.0.41'
+    // tomcat-embed-jasper
+    implementation group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper', version: '9.0.41'
 }
 
 test {
