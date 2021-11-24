@@ -5,6 +5,12 @@
     <title>Title</title>
 </head>
 <body>
-    <h1 th:text="${'thymeleaf Sample Test'}"></h1>
+<h1 th:text="${result}"></h1>
+<h1 th:text="${dto}"></h1>
+
+<script th:inline="javascript">
+    let msg = [[${result}]]
+    let dto = [[${dto}]]
+</script>
 </body>
 </html>

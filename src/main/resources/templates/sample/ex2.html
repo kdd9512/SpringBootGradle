@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul>
+        <!-- th:each - 반복 처리. -->
+        <!-- th:each="변수, 변수, ... : ${controller 에서 전달된 데이터}" -->
+
+        <!-- th:if - 조건문 -->
+        <!-- 이하의 경우, dto.sno 가 5의 배수일 경우에만 출력. -->
+<!--        <li th:each="dto, state : ${list}" th:if="${dto.sno % 5 == 0}">-->
+        <li th:each="dto, state : ${list}" th:text="${dto.sno % 5 == 0} ? ${dto.sno} : ${dto.first}">
+            <!-- [[]] : 인라인 표현식. 별도의 태그속성을 지정하지 않고 변수를 사용하고자 할 때 사용. -->
+            [[${state.index}]] --- [[${dto}]]
+<!--            [[${dto}]]-->
+        </li>
+    </ul>
+</body>
+</html>
