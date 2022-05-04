@@ -1,4 +1,4 @@
-package com.dto;
+package com.springbootgradle.dto;
 
 import lombok.Builder;
 import lombok.Data;

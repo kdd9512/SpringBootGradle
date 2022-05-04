@@ -1,6 +1,6 @@
 package com.springbootgradle.controller;
 
-import com.dto.SampleDTO;
+import com.springbootgradle.dto.SampleDTO;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,6 +15,7 @@ import java.util.stream.IntStream;
 
 @Controller
 @RequestMapping("/sample")
+// 동작을 확인하기 위해 적용하는 annotation
 @Log4j2
 public class SampleController {
 
